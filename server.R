@@ -20,7 +20,7 @@ shinyServer(function(input, output) {
   })
   output$lm_output <- renderPrint({
     #print('asdfsaf')
-    #print(input$xvars)
+    print(input$xvars)
     #print(dbool)
     if(dbool == TRUE) {
       x <- df()
