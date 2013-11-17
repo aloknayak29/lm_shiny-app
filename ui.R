@@ -17,13 +17,14 @@ shinyUI(pageWithSidebar(
                    'Double Quote'='"',
                    'Single Quote'="'"),
                  'Double Quote'),
-    checkboxGroupInput("xvars", "Choose x variables", as.character(1:10)),
+    checkboxGroupInput("xvars", "Choose x variables", as.character(1:15)),
     selectInput("yvar", "Choose y variable:", 
-               choices = as.character(c(1:10))),
+                choices = as.character(c(1:15))),
     #checkboxInput("", "Show LM output"),
     submitButton("Update View")
   ),
   mainPanel(
+    verbatimTextOutput('cnames'),
     verbatimTextOutput('lm_output'),
     tableOutput('contents')
   )
